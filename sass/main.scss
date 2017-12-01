@@ -1,0 +1,463 @@
+@import "normalize";
+//@import "bulma";
+
+@import url('https://fonts.googleapis.com/css?family=Frijole');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@font-face {
+  font-family: 'TheHandBold';
+  src: url('../fonts/2EF3AC_0_0.eot');src: url('../fonts/2EF3AC_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2EF3AC_0_0.woff2') format('woff2'),url('../fonts/2EF3AC_0_0.woff') format('woff'),url('../fonts/2EF3AC_0_0.ttf') format('truetype');
+}
+//@font-face {
+//  font-family: 'AvenirNextLTPro-Medium';
+//  src: url('../fonts/2FDF27_8_0.woff2') format('woff2'), url('../fonts/2FDF27_8_0.woff') format('woff'), url('../fonts/2FDF27_8_0.ttf') format('truetype');
+//}
+
+@import "flex";
+
+$red: #782121;
+$yellow: #ffff00;
+$light-yellow: #f2f3e3;
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Josefin Sans', sans-serif;
+//  font-family: 'AvenirNextLTPro-Medium', sans-serif;
+
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Frijole', cursive;
+  font-weight: lighter;
+
+}
+
+.font-red {
+  color: $red;
+}
+
+p {
+  font-size: 1.125em;
+}
+
+a {
+  text-decoration: none;
+  color: $red;
+  &:hover {
+    color: #777;
+  }
+}
+
+/************ GRID ***************/
+
+.full-width {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.half-width {
+  width: 600px;
+  float: left;
+}
+.third-width {
+  width: 400px;
+  float: left;
+}
+.quarter-width {
+  width: 300px;
+  float: left;
+}
+
+/************* HEADER *****************/
+
+#header {
+  background-color: #fff;
+  background: url(../img/envelope3-1440.png) left no-repeat, url(../img/banner-1.jpg) top no-repeat;
+  background-size: cover;
+}
+
+#nav {
+  padding-top: 1em;
+}
+
+#nav ul {
+  text-align: right;
+  li {
+    display: inline;
+    list-style-type: none;
+    a {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin: 1em;
+      color: $red;
+      &:hover {
+        color: grey;
+      }
+    }
+  }
+}
+
+/**************** MAIN ****************/
+
+#main {
+//  height: 4000px;
+  background: #eaeaea;
+  background: white;
+}
+
+/************* BANNER ********************/
+
+#banner {
+  height: 768px;
+  height: calc(100vh - 100px);
+
+  h4.scream span {
+    color: #fff;
+    font-size: 2.5em;
+  }
+  h2.cry {
+    text-align: center;
+    span {
+      color:#782121;
+    }
+  }
+  h1.title {
+    margin: .25em 0 .5em 0;
+    font-size: 2.75em;;
+    a {
+      color: black;
+    }
+  }
+  .banner-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-column-gap: 2px;
+  }
+}
+
+h4.scream {
+  color: #ffff00;
+  text-shadow: 16px 16px 40px grey;
+//  opacity: .7;
+}
+
+ul.social-icons {
+  text-align: center;
+  margin-top: 2em;
+  li {
+    display: inline;
+    img {
+      width: 50px;
+      margin-left: 8px;
+    }
+  }
+}
+
+/************** ABOUT ********************/
+
+#about {
+  height: calc(100vh - 9em);
+  background: #f2f3e3;
+  background: #fff;
+//  border-bottom: 4px solid $light-yellow;
+  hr {
+    background-color: $red;
+    height: 1px;
+    border: 0;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column-gap: 1px;
+}
+
+.quote, .header-section {
+  padding-top: 2em;
+  h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+//    font-family: 'AvenirNextLTPro-Medium';
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bold;
+  }
+}
+
+.header-section h2 {
+  font-size: 3em;
+  font-family: 'TheHandBold', cursive;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+.quote-smurf {
+  background: url(../img/it-smurf.png) 39% 25% no-repeat;
+  height: 400px;
+}
+
+.text-main p {
+  width: 90%;
+  margin: 1.5em auto;
+}
+
+#etymology {
+  padding-left: 1em;
+  text-align: center;
+  p {
+    span {
+      text-align: center;
+      &.font-16px {
+        font-size: 16px;
+      }
+      &.font-19px {
+        font-size: 19px;
+      }
+      &.font-22px {
+        font-size: 22px;
+      }
+      &.font-24px {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+/*************** WORK *******************/
+
+#work {
+  height: 768px;
+  width: 95%;
+  margin: auto;
+  background: $light-yellow;
+  background: #d9dcca;
+  background: url(../img/underwater2.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 4px solid $light-yellow;
+
+  .header-section h2 {
+    color: white;
+    font-size: 5em;
+    letter-spacing: 7px;
+    .font-red {
+      color: $light-yellow;
+    }
+  }
+  .full {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    height: inherit;
+    justify-content: center;
+  }
+  .move-up {
+  //  border-left: 1px solid white;
+  //  border-right: 1px solid white;
+    width: 24%;
+    height: 768px;
+  //  margin-top: -120px;
+  }
+  .half-width {
+    background: url(../img/websites-bg.png) center no-repeat;
+    height: 600px;
+    img {
+      display: block;
+      margin: 2em auto;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      width: 60%;
+      margin: 2em auto;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      border-top: 1px solid $red;
+    }
+    p {
+      margin: auto;
+      width: 75%;
+    }
+  }
+  .full-width hr {
+  //  transform: rotate(90deg);
+  }
+}
+
+#skills {
+  height: 880px;
+  background: url(../img/envelope-3.png) center 0 no-repeat;
+  background-color: white;
+  background-size: cover;
+  .header-section {
+    margin-bottom: 3em;
+  }
+  .first-h2 h2 {
+    text-align: right;
+  }
+  .second-h2 h2 {
+    text-align: center;
+//    font-size: 2.5em;
+    font-weight: bold;
+  }
+  .third-h2 h2 {
+    text-align: left;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1px;
+  }
+}
+
+/************ Artcomics ****************/
+
+
+#artcomics {
+  background: url(../img/artcomics.png) center no-repeat, url(../img/posk-bg.jpg) center top no-repeat;
+  margin-bottom: 3em;
+  padding-bottom: 2em;
+  h3.header-section {
+    font-size: 2em;
+    font-family: 'TheHandBold', cursive;
+    letter-spacing: 2px;
+    font-weight: normal;
+    text-align: center;
+  }
+//  background-attachment: fixed;
+  background-size: cover;
+  .half-width {
+    border: 4px double $red;
+    float: none;
+    margin: -5em auto 0;
+    width: 700px;
+    background: white;
+    img {
+      display: block;
+      margin: auto;
+//      border: 4px solid #eaeaea;
+//      max-width: 98%;
+    }
+    p {
+      margin: 1em auto;
+      padding: 4px 4em;
+    }
+  }
+}
+
+/************ Contact ************/
+
+#contact {
+  padding-bottom: 5em;
+  form {
+    margin-bottom: 4em;
+    padding: 1em;
+  }
+  div.wrapper {
+    margin: 1em auto;
+    width: 60%;
+    background: $light-yellow;
+    padding-top: 1em;
+    border: 4px double $red;
+    .form-item {
+  //    margin: auto;
+      display: inline;
+      width: 48%;
+      label, input[type="submit"] {
+        color: black;
+        font-family: 'TheHandBold', cursive;
+        display: block;
+        font-size: 1.25em;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        margin: 1em auto;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      input[type="text"], input[type="password"], input[type="email"], input[type="submit"], select {
+        height: 2.75em;
+        width: 48%;
+        display: block;
+        margin: 1em auto;
+      }
+      input[type="submit"] {
+        margin: 2em auto;
+        color: white;
+        width: 12.5%;
+        background-color: $red;
+        border: 4px solid white;
+      }
+      textarea {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+}
+form {
+  margin: 1em auto;
+}
+label {
+
+}
+
+
+/************ Footer *************/
+
+#footer {
+  background: $red;
+  color: $light-yellow;
+  text-align: center;
+  height: 88px;
+  @include flexbox;
+  @include justify-content(space-around);
+  @include align-items(center);
+  a {
+    color: white;
+  }
+  img {
+    display: block;
+    margin: auto;
+    padding-top: 16px;
+    width: 100px;
+  }
+}
+
+/************ Custom *************/
+
+.credits {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 4px;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+}
+
+/************ flexblock ****************/
+
+.flexblock {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    font-size: 1.6em;
+    line-height: 1.2;
+  }
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@import "cards";
+@import "button";
+@import "blog";

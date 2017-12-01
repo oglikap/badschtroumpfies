@@ -1,0 +1,108 @@
+.cards {
+  @include flexbox;
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+//  border: 1px solid #eaeaea
+  }
+
+.cards-item {
+  @include flexbox;
+//  border-right: 1px solid #eaeaea;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.333333%;
+  }
+  @media(min-width: 1200px) {
+    width: 25%;
+  }
+}
+
+.card {
+//  border-radius: .5rem;
+  box-shadow: 0 20px 40px -14px rgba(255, 255, 255, 0.5);
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  overflow: hidden;
+  border: 1px solid $red;
+//  border: 1px solid #eaeaea;
+  background-color: #fff;
+  padding-top: 10%;
+  &:hover {
+    .card-image {
+      filter: contrast(100%);
+    }
+  }
+  h5 a {
+    color: black;
+    font-size: 2em;
+    line-height: 1em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'TheHandBold', cursive;
+
+    letter-spacing: 4px;
+    text-transform: uppercase;
+//    font-variant: small-caps;
+    font-weight: bold;
+    opacity: .7;
+  //  text-shadow: 1px 1px 32px white;
+  }
+  span.dot {
+    color: $red;
+    font-weight: bold;
+  }
+}
+
+.card-content {
+  @include flexbox;
+//  @include flex(1 1 auto);
+  @include flex-direction(column);
+  width: 80%;
+  @include align-items(center);
+  padding: 1rem;
+  p {
+    margin: 1% 1% 5% 1%;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+    font-size: .875em;
+  }
+}
+
+.card-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  filter: grayscale(100%);
+  overflow: hidden;
+  position: relative;
+  transition: filter .5s cubic-bezier(.43,.41,.22,.91);
+  &::before {
+    content: "";
+    display: block;
+    padding-top: 5% // 16:9 aspect ratio
+  }
+  @media(min-width: 40rem) {
+    &::before {
+//      padding-top: 66.6% // 3:2 aspect ration
+    }
+  }
+}
+
+.card-text {
+  @include flex(1 1 auto);
+  font-size: .875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.card-image--fence {
+  background-image: url(https://unsplash.it/800/600?image=59);
+}
