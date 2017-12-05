@@ -385,22 +385,6 @@ a {
     color: #777; }
 
 /************ GRID ***************/
-.full-width {
-  width: 1200px;
-  margin: 0 auto; }
-
-.half-width {
-  width: 600px;
-  float: left; }
-
-.third-width {
-  width: 400px;
-  float: left; }
-
-.quarter-width {
-  width: 300px;
-  float: left; }
-
 /************* HEADER *****************/
 #header {
   background-color: #fff;
@@ -559,6 +543,8 @@ ul.social-icons {
     #work .half-width p {
       margin: auto;
       width: 75%; }
+  #work .quarter-width {
+    margin-top: -4em; }
 
 #skills {
   height: 880px;
@@ -567,6 +553,8 @@ ul.social-icons {
   background-size: cover; }
   #skills .header-section {
     margin-bottom: 3em; }
+  #skills .full-width {
+    margin-top: 4em; }
   #skills .first-h2 h2 {
     text-align: right; }
   #skills .second-h2 h2 {
@@ -581,10 +569,10 @@ ul.social-icons {
 
 /************ Artcomics ****************/
 #artcomics {
-  background: url(../img/artcomics.png) center no-repeat, url(../img/posk-bg.jpg) center top no-repeat;
+  background: url(../img/artcomics.png) center top no-repeat, url(../img/artcomics-bg.png) center bottom no-repeat;
   margin-bottom: 3em;
   padding-bottom: 2em;
-  background-size: cover; }
+  border-top: 8px solid #f2f3e3; }
   #artcomics h3.header-section {
     font-size: 2em;
     font-family: 'TheHandBold', cursive;
@@ -594,7 +582,7 @@ ul.social-icons {
   #artcomics .half-width {
     border: 4px double #782121;
     float: none;
-    margin: -5em auto 0;
+    margin: -7em auto 0;
     width: 700px;
     background: white; }
     #artcomics .half-width img {

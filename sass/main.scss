@@ -55,23 +55,23 @@ a {
 
 /************ GRID ***************/
 
-.full-width {
-  width: 1200px;
-  margin: 0 auto;
-}
+//.full-width {
+//  width: 1200px;
+//  margin: 0 auto;
+//}
 
-.half-width {
-  width: 600px;
-  float: left;
-}
-.third-width {
-  width: 400px;
-  float: left;
-}
-.quarter-width {
-  width: 300px;
-  float: left;
-}
+//.half-width {
+//  width: 600px;
+//  float: left;
+//}
+//.third-width {
+//  width: 400px;
+//  float: left;
+//}
+//.quarter-width {
+//  width: 300px;
+//  float: left;
+//}
 
 /************* HEADER *****************/
 
@@ -287,6 +287,10 @@ ul.social-icons {
       width: 75%;
     }
   }
+  .quarter-width {
+    margin-top: -4em;
+  }
+
   .full-width hr {
   //  transform: rotate(90deg);
   }
@@ -299,6 +303,9 @@ ul.social-icons {
   background-size: cover;
   .header-section {
     margin-bottom: 3em;
+  }
+  .full-width {
+    margin-top: 4em;
   }
   .first-h2 h2 {
     text-align: right;
@@ -322,9 +329,10 @@ ul.social-icons {
 
 
 #artcomics {
-  background: url(../img/artcomics.png) center no-repeat, url(../img/posk-bg.jpg) center top no-repeat;
+  background: url(../img/artcomics.png) center top no-repeat, url(../img/artcomics-bg.png) center bottom no-repeat;
   margin-bottom: 3em;
   padding-bottom: 2em;
+  border-top: 8px solid $light-yellow;
   h3.header-section {
     font-size: 2em;
     font-family: 'TheHandBold', cursive;
@@ -333,11 +341,11 @@ ul.social-icons {
     text-align: center;
   }
 //  background-attachment: fixed;
-  background-size: cover;
+//  background-size: cover;
   .half-width {
     border: 4px double $red;
     float: none;
-    margin: -5em auto 0;
+    margin: -7em auto 0;
     width: 700px;
     background: white;
     img {
@@ -357,6 +365,7 @@ ul.social-icons {
 
 #contact {
   padding-bottom: 5em;
+//  border-top: 4px solid $red;
   form {
     margin-bottom: 4em;
     padding: 1em;
