@@ -385,6 +385,22 @@ a {
     color: #777; }
 
 /************ GRID ***************/
+.full-width {
+  width: 1200px;
+  margin: 0 auto; }
+
+.half-width {
+  width: 600px;
+  float: left; }
+
+.third-width {
+  width: 400px;
+  float: left; }
+
+.quarter-width {
+  width: 300px;
+  float: left; }
+
 /************* HEADER *****************/
 #header {
   background-color: #fff;
